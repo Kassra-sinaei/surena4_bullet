@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/home/kassra/naoqi/pynaoqi-python-2.7-naoqi-1.14-linux64",
+        "/home/kassra/naoqi/pynaoqi-python2.7-naoqi-1.14-linux64"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/home/kassra/naoqi/pynaoqi-python-2.7-naoqi-1.14-linux64",
+        "/home/kassra/naoqi/pynaoqi-python2.7-naoqi-1.14-linux64"
+    ]
+}
