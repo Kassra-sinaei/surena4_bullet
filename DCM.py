@@ -112,4 +112,15 @@ class DCMPlanner:
 
 
 if __name__ == "__main__":
+    dt = 1/240
+    planner = DCMPlanner(0.75, 1.0, 0.3,dt)
+    rF =np.array([[0.0,-0.115,0.0],
+                 [0.4,0.115,0.0],
+                 [0.8,-0.115,0.0],
+                 [1.2,0.115,0.0],
+                 [1.6,-0.115,0.0],
+                 [2.0,0.115,0.0]])
+    planner.setFoot(rF)
+    planner.getXiTrajectory()
+    planner.getCoMTrajectory()
     pass
