@@ -63,7 +63,7 @@ class Robot:
             q7 += np.pi
         q6 = -np.arctan2(r[0], np.sign(r[2]) * np.sqrt(r[1]**2 + r[2]**2)) - q6a # Ankle Pitch
         
-        R = np.matmul(R1.T , np.matmul(R7 , np.matmul(Rroll(-q7) , Rpitch(-q6-q5))))
+        R = np.matmul(R1.T , np.matmul(R7 , np.matmul(self.Rroll(-q7) , self.Rpitch(-q6-q5))))
         q2 = np.arctan2(-R[0,1], R[1,1]) # Hip Yaw
         q3 = np.arctan2(R[2,1], -R[0,1] * np.sin(q2) + R[1,1] * np.cos(q2))  # Hip Roll
         q4 = np.arctan2(-R[2,0], R[2,2]) # Hip Pitch
