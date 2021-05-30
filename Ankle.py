@@ -2,7 +2,7 @@ import numpy as np
 import math
 from matplotlib import pyplot as plt
 
-class Ankle():
+class Ankle:
     def __init__(self, step_time, ds_time, height, dt, alpha = 0.5, num_step = 6):
         self.tStep_ = step_time
         self.tDS_ = ds_time
@@ -57,7 +57,7 @@ class Ankle():
         else:         # right foot swings first
             for step in range(1, self.stepCount+1):
                 if step % 2 == 0:   
-                    for time in np.arange(0.0, (1-self.alpha_) * self.tDS_, self.dt_):
+                    for time in np.arange(0.0, (1-self.alpha_ * self.tDS_), self.dt_):
                         self.rFoot_.append(self.footPose_[step])
                         self.lFoot_.append(self.footPose_[step - 1])
                         
@@ -110,7 +110,7 @@ class Ankle():
 
         return ans 
 
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     dt = 1/240
     anklePlanner = Ankle(1.0, 0.3, 0.05,dt)
     rF =np.array([[0.0,0.115,0.0],
@@ -137,4 +137,4 @@ if __name__ == "__main__":
     plt.plot(right[:,2])
     plt.title("right foot")
     plt.show()
-    pass
+    pass"""

@@ -37,6 +37,11 @@ class DCMPlanner:
                 inte += (self.dt_) * self.xi_[t] * math.exp((t*self.dt_)/(math.sqrt(self.deltaZ_/K_G)))
 
             self.COM_[index] = (inte / math.sqrt(self.deltaZ_/K_G) + self.COM_[0]) * math.exp((-index*self.dt_)/math.sqrt(self.deltaZ_/K_G))
+        plt.plot(self.COM_[:,0],self.COM_[:,1])
+        plt.title('COM Trajectory')
+        plt.xlabel('x')
+        plt.ylabel('y')
+        plt.show()
         return self.COM_
 
     def setFoot(self, rF):
@@ -127,9 +132,7 @@ class DCMPlanner:
         pass
 
 
-
-
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     dt = 1/240
     planner = DCMPlanner(0.75, 1.0, 0.3,dt)
     rF =np.array([[0.0,-0.115,0.0],
@@ -149,4 +152,4 @@ if __name__ == "__main__":
     plt.xlabel('x')
     plt.ylabel('y')
     plt.show()
-    pass
+    pass"""

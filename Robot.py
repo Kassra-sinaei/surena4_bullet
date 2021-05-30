@@ -2,7 +2,7 @@ import numpy as np
 import math
 
 class Robot:
-    def Robot(self, shank, hip, pelvis_lengt):
+    def __init__(self, shank, hip, pelvis_lengt):
         self.config_ = np.zeros(28)
         self.shank_ = shank
         self.hip_ = hip
