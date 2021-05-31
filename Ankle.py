@@ -17,7 +17,7 @@ class Ankle:
     def updateFoot(self,foot_pose):
         self.footPose_ = foot_pose
         if self.footPose_[0,1] < 0:
-            self.leftFirst_ = False
+            self.leftFirst_ = False # left foot swings first
         pass
     
     def generateTrajectory(self):
@@ -87,9 +87,21 @@ class Ankle:
         pass
 
     def getTrajectoryR(self):
+        temp=np.array(self.rFoot_)
+        plt.plot(temp[:,0])
+        plt.plot(temp[:,1])
+        plt.plot(temp[:,2])
+        plt.title("left foot")
+        plt.show()
         return self.rFoot_
 
     def getTrajectoryL(self):
+        temp=np.array(self.lFoot_)
+        plt.plot(temp[:,0])
+        plt.plot(temp[:,1])
+        plt.plot(temp[:,2])
+        plt.title("left foot")
+        plt.show()
         return self.lFoot_
 
     def poly5(self,x0, xf, z_max, tf):
@@ -110,7 +122,7 @@ class Ankle:
 
         return ans 
 
-"""if __name__ == "__main__":
+if __name__ == "__main__":
     dt = 1/240
     anklePlanner = Ankle(1.0, 0.3, 0.05,dt)
     rF =np.array([[0.0,0.115,0.0],
@@ -137,4 +149,4 @@ class Ankle:
     plt.plot(right[:,2])
     plt.title("right foot")
     plt.show()
-    pass"""
+    pass

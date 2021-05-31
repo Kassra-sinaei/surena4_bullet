@@ -132,7 +132,7 @@ class DCMPlanner:
         pass
 
 
-"""if __name__ == "__main__":
+if __name__ == "__main__":
     dt = 1/240
     planner = DCMPlanner(0.75, 1.0, 0.3,dt)
     rF =np.array([[0.0,-0.115,0.0],
@@ -152,4 +152,4 @@ class DCMPlanner:
     plt.xlabel('x')
     plt.ylabel('y')
     plt.show()
-    pass"""
+    pass
