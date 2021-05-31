@@ -16,5 +16,7 @@ Simulation of Surena IV in PyBullet
   <li> Thats it, enjoy! </li>
 </ol>
 <br>
+<p>&#8505 This simulation is not synced with real time walking speed is 0.6 km/hr</p>
+<br>
 <img src="https://github.com/Kassra-sinaei/surena4_bullet/blob/master/Surena_Walk_Slow.gif" align="center"/> 
 <br>
